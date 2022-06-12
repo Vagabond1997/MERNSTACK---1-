@@ -1,0 +1,17 @@
+ <script>
+var str1=txtId.value;
+        var regexp1 = /[0-9]/;
+        var regexp2 = /[a-zA-z]/;
+        var str1 = txtId.value;
+        var str2 = txtName.value;
+        var str3 = txtAdress.value;
+        var str4 = txtPhone.vlaue;
+        var str5 = txtEmail.value;
+
+        if(regexp1.test(str1) && regexp2.test(str2)){
+        document.write(str1, str2 , str3, str4, str5);
+    }
+    else {
+        document.write("error");
+    }
+    </script>

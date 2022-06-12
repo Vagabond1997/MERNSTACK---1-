@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1>Add Element</p>
+    <p>2>Remove Element</p>
+    <p>3>Search Element</p>
+    <p>4>Update Index</p>
+    <p>5>Delete Index</p>
+    <p>6>Exit</p>
+    <p><label >Option:</label><input type="text" class="inp1" ></p>
+    <p><label>Value:</label><input type="text" class="inp2" ></p>
+    <p><label >Index:</label><input type="text" class="inp3" ></p>
+    <h2 class="found">Not Found</h2>
+    <button class="press">press</button>
+    <h1 class="disp"></h1>
+    <script>
+        const b=[];
+        var a1=document.querySelector(".inp1");
+        var a2=document.querySelector(".inp2");
+        var a3=document.querySelector(".inp3");
+        function disp(){
+            document.querySelector(".disp").innerHTML=`[${b}]`;
+        }
+        function outOfIndex(){
+            if(Number(a3.value)>b.length-1 || a3.value<0){
+                    console.log(Number(a3.value))
+                    alert("Index is outOfRange");
+                    return 1;
+            }
+        }
+        disp()
+        document.querySelector(".press").addEventListener('click',function(){
+            switch(Number(a1.value)){
+                case 1:
+                    b.push(Number(a2.value));
+                    disp();
+                    break;
+                case 2:
+                    b.pop();
+                    disp();
+                    break;
+                case 3:
+                    if(b.includes(Number(a2.value)))
+                        document.querySelector(".found").innerHTML=`Element found at index ${ b.indexOf(Number(a2.value))}`
+                    else
+                        document.querySelector(".found").innerHTML="Element not found";
+                    break;
+                case 4:
+                    if(outOfIndex())
+                        break;
+                    else{
+                        b[Number(a3.value)]=Number(a2.value);
+                        disp();
+                    }
+                    break;
+                case 5:
+                    if(outOfIndex()){
+                        break;
+                    }
+                    else{
+                        b.splice(Number(a3.value),1);
+                        disp();
+                    }
+                    break;
+                case 6:        
+                    default:alert("Not a valid option");
+                    break;
+            }
+        })
+    </script>
+</body>
+</html>

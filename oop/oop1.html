@@ -1,0 +1,30 @@
+
+<script src="oop1.js"> </script>
+<script>
+/*
+p1 = new Person(1,"Broadway","KTM");
+document.write(p1.pid+"</br>");
+document.write(p1.name+"</br>");
+document.write(p1.address+"</br>");
+
+
+/*
+p2 = new Person(1, "Raj");
+document.write(typeof p2);
+document.write(p2.pid,p2.name,p2.address);
+*/
+
+
+c1 = new Calculator(10,4);
+c1.calculate('-');
+document.write(c1.num1, c1.num2, c1.num3);
+
+
+c2 = new CalculatorV2(10,4);
+c2.calculate('+');
+document.write(c2.num1, c2.num2, c2.num3);
+c2.setNum2(9);//setter
+c2.calculate('+');//setter
+document.write(c2.num1,c2.num2,c2.num3);//value access 
+document.write(c2.toString());
+</script>

@@ -1,0 +1,65 @@
+<script src="resultjs.js"></script>
+<h2>Result Processing</h2>
+<p>SID : <input type="text" id="txtSid"></p>
+<p>SUB:1: <input type="text" id="txtSub1"></p>
+<p>SUB:2: <input type="text" id="txtSub2"></p>
+<p>SUB:3: <input type="text" id="txtSub3"></p>
+<p><input type="button" value="PROCESS" name="btnProcess" onclick="processStudent1()"></p>
+<p>TOTAL: <input type="text" id="txtTotal"></p>
+<p>AVERAGE: <input type="text" id="txtAvg"></p>
+<p>RESULT: <input type="text" id="txtResult"></p>
+<p><button type="submit"  name="btnSave" onclick="processStudent2()">Save </button>
+</p>
+<table border="1" class="table5">
+  <tr><td>ID</td><td>SUB1</td><td>SUB2</td><td>SUB3</td>TOTAL<td>AVERAGE</td><td>RESULT</td></tr>
+  </table>
+  <script>
+    function addrow(sid,sub1,sub2,sub3,processData){
+      var tbl=
+       `<tr>
+    <td${sid}</td>
+    <td ${sub1}</td>
+    <td ${sub2}</td>
+    <td ${sub3}</td>
+    <td ${processData.total}</td>
+    <td ${processData.avg}</td>
+    <td ${processData.result}</td>
+  </tr>`
+  document.querySelector(".table5").insertAdjacentHTML("beforeend",html);
+        console.log(sid,sub1,sub2,sub3,processData)
+}
+
+    function processStudent1(){
+      var sid=sub1=sub2=sub3=null;
+       sid=txtSid.value;
+       sub1=parseInt(txtSub1.value);
+       sub2=parseInt(txtSub2.value);
+       sub3=parseInt(txtSub3.value);
+       var result = process1(sid,sub1,sub2,sub3);
+       txtTotal.value=result.total;
+       txtAvg.value=result.avg;
+       txtResult.value=result.result;
+    }
+
+
+    function processStudent2(){
+      sid=txtSid.value;
+       sub1=parseInt(txtSub1.value);
+       sub2=parseInt(txtSub2.value);
+       sub3=parseInt(txtSub3.value);
+        //create object 
+        var processData = {
+          sub1:sub1,
+          sub2:sub2,
+          sub3:sub3,
+        }
+      //return processData;(we shouldnt do return)
+       var result12 = new process2(processData);
+       console.log(result12);
+        txtTotal.value=result12.total;
+        txtAvg.value=result12.avg;
+        txtResult.value=result12.result;
+        addrow(sid,sub1,sub2,sub3,result12);
+    
+  }
+</script>

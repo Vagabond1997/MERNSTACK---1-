@@ -1,0 +1,65 @@
+<script>
+    //Date object 
+    //Constructor 
+    //Date()
+
+    //Methods 
+    //Static methods 
+    //Date.now()
+
+    var dt = new Date();
+    console.log(dt); //output Mon Jun 06 2022 18:27:56 GMT+0545 (Nepal Time) 
+
+    //function name 
+    //Date.parse()
+
+   var str1 = String("Mon Jun 06 2022 18:27:56 GMT+0545");
+   var dt2 = Date.parse(str1);
+
+   console.log(typeof dt2); //output = number
+   console.log(dt2); //output = 1654519376000
+
+   //timestamp to date in javascript 
+   var dt3 = Date(dt2);
+   console.log(dt3);
+   
+   //String to date 
+   // var dt2 = Date.parse("2022-06-06"); ////YY-MM-DD
+    // var dt2 = Date.parse("2022/06/06"); ////YY/MM/DD
+   var dt2 = Date.parse("2022-06-06");
+   var dt2 = Date.parse("2022/06/06");
+
+   console.log(typeof dt2); //OUTPUT = number 
+   console.log(dt2); //OUTPUT = 1654473600000
+   console.log(dt3);
+   console.log(new Date(dt2)); //output = Mon Jun 06 2022 05:45:00 GMT+0545 (Nepal Time)
+
+   //Date difference 
+
+  var date1 = new Date("05/30/2018");
+  var date2 = new Date("06/30/2018");
+  var diff_time = date2.getTime() - date1.getTime();
+  var diff_days = diff_time / (1000 * 3600 *24);
+  console.log(`Difference Days : ${diff_days}`);
+
+  //Starts at 6:02 pm 
+  //Now 6:50 pm 
+  //var dt3 = new Date(dt2);
+  //console.log(dt3.getTime())
+  //console.log(dt3)
+
+  //Date.UTC()
+
+
+  var date1 = new Date("Mon Jun 06 2022 06:02:00 GMT+0545");
+  var date2 = new Date();
+
+  var diff_time = date2.getTime() - date1.getTime();
+  var diff_days = diff_time / (1000 * 3600);
+  console.log(`Difference Days : ${diff_days}`);
+   
+ 
+
+
+
+</script>

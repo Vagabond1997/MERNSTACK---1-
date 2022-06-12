@@ -1,0 +1,88 @@
+<script>
+    //Array()
+        
+    var arr1 = new Array(); //creating constructor 
+    var arr2 = new  Array(4,5,6,7);
+    var arr3 = [4,5,6,7,8,9];
+    console.log(arr1);
+    console.log(typeof arr2);
+    console.log(arr2.length); //length determine the number of elements 
+   
+   //methods 
+   //Array.isArray()
+   //syntax 
+   //Array.isArray(value) => it returns boolean type of value 
+   console.log(Array.isArray(arr1));
+   console.log(Array.isArray(6789));
+   console.log(Array.isArray("Sidhikali"));
+//another method to get boolean type of value i.e. true or false 
+   console.log(arr1 instanceof Array);
+
+
+   //instance methods 
+   //Array.at()
+   //at(index)-> parameter 
+   //this method returns character 
+   try{
+   console.log(arr1.at(2)); //+ve indexing  //we have given instance methods i.e. object of class which is arr1 
+   console.log(arr1.at(-5)); //-ve indexing 
+   console.log(arr1.at(20));
+   if(arr1.length>20){
+       console.log(arr1.at(20));
+       
+   }
+   else{
+       throw"Index out of bounds!";
+   }
+}
+catch(exception){
+    console.log("Error:"+exception);
+}
+//Array.concat() -> Array (the concat function returns array.)
+//concat()
+//concat(value0)
+//concat(value0, value1)
+//concat(value0, value1, ... , valueN)
+
+var arr1 = new Array(5,6,3);
+console.log(arr1);
+arr1 = arr1.concat(7);
+console.log(arr1);
+arr1 = arr1.concat(9,2);
+console.log(arr1);
+arr1 = arr1.concat(3,4,5,6,7);
+console.log(arr1);
+// Array.copyWithin() -> Array (it returns modified array i.e. basically array)
+// copyWithin(target)
+// copyWithin(target, start)
+// copyWithin(target, start, end)
+
+
+var arr1 = new Array(5,6,7,4,3,7,8,9,10,11,12);
+console.log(arr1);
+arr2 = arr1.copyWithin(4,5,8);
+console.log(arr2);
+
+
+//Array.prototype.push() -> length (it returns length which is number of elements of array)
+// push(element0)
+// push(element0, element1)
+// push(element0, element1, /* ... ,*/ elementN)
+ /*
+var arr1 = new Array(5,6);
+console.log(arr1.push(7));
+console.log(arr1);
+console.log(arr1.push(5,3));
+console.log(arr1);
+console.log(arr1.push(7,8,8,9,4,3,2,7));
+console.log(arr1);
+
+//Array.prototype.push() -> element 
+//synntax = pop()
+
+console.log(arr1.pop());
+
+//Task 
+
+*/
+</script>

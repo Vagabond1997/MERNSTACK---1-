@@ -1,0 +1,99 @@
+<script>
+    //encapsulation (binding)
+class Person{
+    //instance variables 
+pid;
+fullName;
+//defining default constructor 
+constructor(pid=0,fullName="NA") {
+this.pid=pid;
+this.fullName=fullName;
+}
+
+//setter and getter 
+setPID(pid) {
+    this.pid=pid;
+
+}
+
+setfullName(fullName) {
+    this.fullName=fullName;
+    
+}
+ //getter 
+ getPID(){
+     return this.pid;
+ }
+ getfullName(){
+     return this.fullName;
+ }
+ toString(){
+    return this.pid+", "+this.fullName;
+ }
+ 
+
+}
+
+//inheritance 
+
+
+class NewPerson extends Person{
+    //can access the resources of person class 
+    address; 
+    phone;
+    constructor(pid=0, fullName="NA",address="NA", phone="NA") {
+        super(pid, fullName); //constructor of parent class
+        this.address=address;
+        this.phone=phone;
+    }
+    setAddress(address) {
+    this.address=address;
+
+}
+
+setPhone(phone) {
+    this.phone=phone;
+    
+}
+
+getaddress(){
+     return this.address;
+ }
+ getphone(){
+     return this.phone;
+ }
+ toString(){
+    return super.pid+", "+super.fullName+","+this.address+","+this.phone;
+ }
+}
+</script>
+
+
+<script>
+    //declaring objects 
+    var p1 = new Person();
+   // p1.pid = 1;
+   // p1.fullName = "Scar on Broadway";
+    console.log(p1);
+    var p1 = new Person();
+    console.log(p1);
+    var p1 = new Person(1);
+    console.log(p1);
+    var p1 = new Person(1,"NAME");
+    console.log(p1);
+    var p1 = new Person(1,"NAME","ADDRESS");
+    console.log(p1);
+    p1.setPID(100);
+    console.log(p1);
+    console.log(p1.getfullName());
+   // p1.setfullName("Science");
+    //console.log(p1);
+    //console.log(p1.toString());
+/*
+    var p2 = new NewPerson();
+    console.log(p2);
+    var p2 = new NewPerson(1,"Bibek","KTM","234");
+    console.log(p2);
+*/
+</script>
+

@@ -1,0 +1,56 @@
+<h1>Personal form</h1>
+<p>ID: <input type="text" id="txtId"></p>
+<p>Name: <input type="text" id="txtName"></p>
+<p>Address: <input type="text" id="txtAddress"></p>
+<p>Phone: <input type="text" id="txtPhone"></p>
+<p>Email: <input type="text" id="txtEmail"></p>
+<p><input type="button" value="CHECK" onclick="process()"></p>
+<script>
+    var process=function(){
+        //validate form using regular expression
+        var str1=txtId.value;
+        var str2=txtName.value;
+        var str3 = txtAddress.value;
+        var str7 = txtPhone.value;
+        var str11 = txtEmail.value;
+        var regexp = /[0-9]/;
+        var regexp1=/^[a-zA-Z]+[a-zA-Z]+$/;
+        var regexp2=/^[a-zA-Z\,]+[a-zA-Z]+$/;
+        var regexp3=/[8,9]+[0-9]{9}/;
+        var regexp4=/[a-zA-Z\.]+[a-zA-Z0-9\,]+[@][a-z]+[\.][a-z]{2,3}/;
+        var str4="";
+        var str5="";
+        var str6="";
+        var str8="";
+        var str9="";
+        var result1=false;
+        var result2= regexp.test(str1);
+        var result3= regexp1.test(str2);
+        var result4 = regexp2.test(str3);
+        var result5 = regexp3.test(str7);
+        var result6 = regexp4.test(str11);
+        if(result2 == true && result3 == true && result4 == true &&result5 == true &&result6 == true){
+            str1="<br/>ID:"+txtId.value;
+            str2="<br/>Name:"+txtName.value;
+            str3="<br/>Address:"+txtAddress.value;
+             str7 ="<br/>Phone:"+ txtPhone.value;
+              str11 ="<br/>Email:"+ txtEmail.value;
+            result1=true;
+        }
+        else{
+            str4=str4+"<br/>Error:ID";
+            str5=str5+"<br/>Error:Name";
+            str6=str6+"<br/>Error:Address"
+            str8=str8+"<br/>Error:Phone"
+             str9=str9+"<br/>Error:Email"
+            
+        }
+        if(result1==true){
+            document.write(str1,str2,str3,str7,str11);
+        }
+        else{
+            document.write(str4,str5,str6,str8,str9);
+        }
+
+    }
+</script>

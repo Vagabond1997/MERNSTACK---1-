@@ -1,0 +1,195 @@
+
+<script>
+//array.prototype.function
+//arrow function 
+//forEach()
+
+//Callback function 
+// forEach(callbackFn)
+// forEach(callbackFn, thisArg)
+
+
+//inline call back function 
+
+/*
+example 
+
+var arr1 = new Array(6,7,8,9,2,1)
+arr1.forEach((element) => {
+    console.log(element);
+});
+
+*/
+//Array.from() -> Array 
+// Arrow function
+// Array.from(arrayLike, (element) => { /* ... */ } )
+// Array.from(arrayLike, (element, index) => { /* ... */ } )
+
+/*
+
+Example:
+var result1 = Array.from("Scars on Broadway");
+console.log(typeof result1);
+console.log(result1);
+
+var arr1 = Array.from([6,7,8,9,2,1]);
+console.log(typeof arr1);
+console.log(arr1);
+*/
+
+//Methods
+// Array.prototype.includes()  -> boolean (return type)
+ 
+//Syntax
+// includes(searchElement)
+// includes(searchElement, fromIndex)
+/*
+var array1 = new Array(3,5,6,7,4,3);
+var result = array1.includes(5);
+console.log(result);
+*/
+
+//Methods
+//Array.prototype.indexOf() ->Number (returns number)
+
+//Syntax
+// indexOf(searchElement)
+// indexOf(searchElement, fromIndex)
+
+/*
+var array1 = new Array(3,5,6,7,4,3);
+var searchElement = 7;
+ result = array1.indexOf(searchElement);
+ console.log(array1);
+ if(result==-1){
+     console.log("Not found");
+ }
+ else{
+     console.log("found at index"+result);
+ }
+ */
+//Methods
+//  Array.isArray() -> value
+//Example
+Array.isArray([1, 2, 3]);  // true
+Array.isArray({foo: 123}); // false
+Array.isArray('foobar');   // false
+Array.isArray(undefined);  // false
+Array.isArray(2,3,4,5,6,7); //false 
+var result = Array.isArray('abc',true,false,9897696);
+console.log(result);
+
+
+//MEthods 
+// Array.prototype.join() -> String 
+/*
+var array1 = new Array('abc',true,false,9897696);
+var result = array1.join();
+console.log(result);
+
+var result = array1.join(";");
+console.log(result);
+*/
+//Methods
+// Array.prototype.lastIndexOf() -> number
+
+//syntax 
+// lastIndexOf(searchElement)
+// lastIndexOf(searchElement, fromIndex)
+
+var array1 = new Array(2,3,4,5,3,7);
+//var result1 = array1.IndexOf(3);
+var result2 = array1.lastIndexOf(3);
+//console.log(result1);
+console.log(result2);
+
+//methods
+// Array.of() -> Array
+
+// Array.of(element0)
+// Array.of(element0, element1)
+// Array.of(element0, element1, /* ... ,*/ elementN)
+
+
+var array2 = Array.of(2,3,4,5,6,7);
+console.log(array2);
+
+// Methods
+// Array.prototype.pop() -> element or undefined
+
+// Syntax
+// pop()
+
+
+var array2 =  new Array(2,3,4,5,6,7);
+var result = array2.pop();
+console.log(result);
+if(result!=undefined) {
+    console.log("Remove element sucessfully");
+}
+else{
+    console.log("Error to remove element of an array");
+}
+
+
+
+// Methods
+// Array.prototype.push() -> Number ()
+
+// Syntax
+// push(element0)
+// push(element0, element1)
+// push(element0, element1, /* ... ,*/ elementN)
+
+var array1 = new Array();
+var result1 = array1.push(0);
+var result2 = array1.push(4,5,3,2,6,7)
+console.log(result1);
+console.log(result2);
+
+//Methods
+// Array.prototype.reduce() -> reducer or iterator 
+
+//Syntax 
+// Arrow function
+// reduce((previousValue, currentValue) => { /* ... */ } )
+// reduce((previousValue, currentValue, currentIndex) => { /* ... */ } )
+// reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ } )
+// reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
+
+
+
+const array = [15, 16, 17, 18, 19];
+
+function reducer(previous, current, index, array) {
+  const returns = previous + current;
+  console.log(`previous: ${previous}, current: ${current}, index: ${index}, returns: ${returns}`);
+  return returns;
+}
+
+var result9 = array.reduce(reducer);
+console.log(result9);
+
+//Methods
+// Array.prototype.reverse() -> array 
+//syntax
+//reverse()
+
+/*
+var array2 =  new Array(2,3,4,5,6,7);
+var result = array2.reverse();
+console.log(result);
+*/
+
+//Methods
+//Array.prototype.sort()
+
+
+// Functionless
+//sort()
+
+// Arrow function
+//sort((a, b) => { /* ... */ } )
+
+
+</script>

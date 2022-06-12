@@ -1,0 +1,116 @@
+<script>
+    var array_var3 = new Array(3,5,6,7,8);
+    //Example-4
+    for(let i=0; i<array_var3.length; i++){ 
+        console.log(array_var3[i]); //output is 3,5,6,7,8 //it returns value 
+    }
+
+    //second technique 
+    console.log("Example-2")
+    for(let index in array_var3){  // in returns index number 
+        console.log(array_var3[index]);  //output is 3,5,6,7,8
+    }
+    //from index value can be identified whereas from value we cant know index.
+  //another technique 
+  console.log("Example-3")
+    for(let item of  array_var3){  // of returns value 
+        console.log(item);  //output is 3,5,6,7,8
+    }
+
+    //for each function (traditional)
+    console.log("Example-4")  // it returns elemnt 
+    array_var3.forEach(function(element){
+        console.log(element);
+    });
+
+    //for each function (arrow function)
+    console.log("Example-5")
+    array_var3.forEach((number,index) => {
+        console.log('Index:' + index + 'Value:' +number);
+    });
+
+    //methods 
+    //Array.at() -> it returns element i.e. value 
+    var array_var3 = new Array(3,5,6,7,8);
+    console.log(array_var3.at(3));
+    console.log(array_var3[3]);
+
+    //array.concat() -> returns array 
+    //concat()
+    //concat(value0)
+    var array_var3 = new Array(3,5,6,7,8);
+    array_var3 = array_var3.concat(4);
+    console.log(array_var3);
+
+   //Array.copyWithin()
+   //copyWithin(target)
+
+   //Array.entries()
+   //entries();
+
+   var array_var3 = new Array(3,5,6,7,8);
+    array_var3_1 = array_var3.entries();//copy by reference or value 
+   // console.log(array_var3_1);
+
+    for(let index in array_var3_1){  // in returns index number 
+        console.log(array_var3_1[index]);  //output is 3,5,6,7,8
+    }
+
+    console.log("Example-3")
+    for(let item of  array_var3_1){  // of returns value 
+        console.log(item);  //output is 3,5,6,7,8
+    }
+
+    //array.every()
+    //arrow function 
+    //every
+
+    var grade = (currentValue) => currentValue < 40; //grade is a function pointer
+    var array1 = [1,30,39,29,10,41];
+    console.log(array1.every(grade));
+
+    //callback function 
+
+    //every(callbackFn)
+    //every(callbackFn, thisArg)
+
+
+    //Array.fill()
+    var array1 = [1,30,39,29,10,13];
+    //fill(value)
+    array1 = array1.fill(6);
+    console.log(array1);
+   //fill(value,start)
+    array1 = array1.fill(6,2);
+    console.log(array1);
+ //fill(value,start,end)
+    array1 = array1.fill(5,2,4);
+    console.log(array1);
+
+    //Array.filter()
+
+    var array = [1,56,67,78,89,23,34];
+    //arrow function 
+    //filter((element) => { /*... */ } )
+
+    var array1_1 = array1.filter(item => item >6);
+    console.log(array1_1);
+
+    var array1_2 = array1.filter(item => item <= 6);
+    console.log(array1_2);
+
+    //Array.find()
+    var array = [1,56,67,78,89,23,34];
+    //arrow function 
+    //find((element) => { /*... */ } )
+  console.log(array1.find(e => e % 2 == 0));
+
+
+  //Array.flat()
+  //flat()
+  //flat(depth)
+  var array1 = [1,23,34,45,56,67];
+  var array2 = array1.flat();
+  console.log(array2);
+
+</script>

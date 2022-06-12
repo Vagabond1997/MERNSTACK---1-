@@ -1,0 +1,63 @@
+<script>
+    var map1 = new Map(); //declaring object 
+   // Constructor
+//Map()
+
+//Methods 
+//Map.prototype.set(key, value)
+
+map1.set('id',1);
+map1.set('name','jimmy');
+map1.set('address','Bhaktapur');
+console.log(map1); //output = Map(1) {'id' => 1}
+map1.set('id',2);
+console.log(map1);
+
+
+//Methods
+// Map.prototype.get(key)
+
+//console.log(map1.get('id')); //output = 1
+
+// Methods
+// Map.prototype.clear()
+
+//map1.clear();
+//console.log(map1);
+
+// Methods
+// Map.prototype.delete()
+
+//map1.delete('id');
+//console.log(map1);
+
+
+// Methods
+// Map.prototype.has() -> boolean (returns true or false)
+
+//syntax 
+//has(key)
+
+//console.log(map1.has('id'));
+
+
+// Map.prototype.keys()
+// Map.prototype.values()
+var keys = map1.keys();
+var values = map1.values();
+//console.log(keys);
+//console.log(values);
+
+console.log("example-9");
+map1.forEach((value,key) => {
+    console.log(key,value);
+})
+
+/*
+for each in javascript
+for (let i =0; i<keys.length; i++){
+    console.log(map.get(keys[i]));
+}
+
+*/
+</script>

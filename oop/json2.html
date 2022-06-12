@@ -1,0 +1,57 @@
+<script>
+
+    //object cloning 
+    const person = {
+        id:1,
+        name:'Soccer',
+        age:25,
+    };
+  /*
+    const tmpPerson2 = {};
+    for(let key in person){
+        tmpPerson2[key] = person[key];//copy by value (varirable to variable value aayo ki copy by value )
+    }
+ //console.log(person);
+ //console.log(tmpPerson2);
+
+/*
+ console.log("Example-3");
+
+ const tmpPerson3 = Object.assign({},person);
+ console.log(person);
+ console.log(tmpPerson3);
+ const tempPerson4 = person;//copy by reference 
+*/ 
+
+    //example 1 
+    const tmpPerson = {};
+    tmpPerson.id = person.id;
+    tmpPerson.name = person.name;
+    tmpPerson.age = person.age;
+    console.log(person);
+    console.log(tmpPerson);
+//copy by value 
+    person.id = 2;
+    console.log(tmpPerson);
+    console.log(person);
+
+    //copy by reference 
+  tmpPerson2 = person;
+    tmpPerson2.id = 100;
+    console.log(person);
+    
+ /*
+   //Json format important topic 
+
+   //object to JSON 
+   const jsonPerson = JSON.stringify(person);
+   console.log(person);
+   console.log(jsonPerson);
+
+   //json to object 
+
+   const objPerson = JSON.parse(jsonPerson);
+   console.log(person);
+   console.log(objPerson);
+   */
+</script>
